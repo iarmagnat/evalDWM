@@ -8,10 +8,13 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>
+        @yield('title')
+    </title>
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/general.css" rel="stylesheet">
 
     <!-- Scripts -->
     <script>
@@ -36,7 +39,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        Shop logo
                     </a>
                 </div>
 
@@ -48,6 +51,22 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
+
+                        <li><a href="{{ url('/products') }}">Products</a></li>
+                        <li><a href="{{ url('/contact') }}">Contact</a></li>
+                        @php
+                            if (Auth::check()):
+                        @endphp
+                        @php
+                            if (Auth::user()->is_admin):
+                        @endphp
+                            <li><a href="{{ url('/messages') }}">See Messages</a></li>
+                        @php
+                            endif;
+                        @endphp
+                        @php
+                            endif;
+                        @endphp
                         <!-- Authentication Links -->
                         @if (Auth::guest())
                             <li><a href="{{ route('login') }}">Login</a></li>
@@ -79,9 +98,20 @@
         </nav>
 
         @yield('content')
+
+        <footer>
+
+            <strong>Want to meet us?</strong>
+
+            <span id="address">number Street-Street City Zipcode</span>
+
+            <span id="copyright">©Me 2017</span>
+
+        </footer>
     </div>
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
+    <script src="/js/custom.js"></script>
 </body>
 </html>
