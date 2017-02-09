@@ -35,7 +35,7 @@ class ContactController extends Controller
             if (Auth::user()->is_admin){
                 // this checks if the user is an admin
 
-                $messages = Message::all();
+                $messages = Message::orderBy('created_at', 'desc')->get();;
 
                 return view('messages', ['messages' => $messages]);
             }

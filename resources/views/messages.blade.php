@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-Products
+See messages
 @endsection
 
 @section('content')
