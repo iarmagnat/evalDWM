@@ -55,9 +55,8 @@ Stores the messages sent by users, as well as their reading status as a 0/1 inte
     - Includes an ajax request to delete or mark messages as read and a special display for unread ones
 
 - add Product
-        -killer feature
     - Includes a file upload field (unstyled by lack of time) and a WYSIWYG editor for the product (the image is a kitten as a placeholder as I didn't know hot to do in otherwise) 
-        -killer feature
+    
 ## issues
 
 - A single CSS and JS file is loaded in every page leaving a lot of what is loaded unused
