@@ -38,7 +38,7 @@ CREATE TABLE `messages` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -47,7 +47,7 @@ CREATE TABLE `messages` (
 
 LOCK TABLES `messages` WRITE;
 /*!40000 ALTER TABLE `messages` DISABLE KEYS */;
-INSERT INTO `messages` VALUES (2,'Name','Topic: Topic <br> Message',0,'2017-02-09 15:16:37','2017-02-09 15:16:37'),(3,'Name','Topic: Topic<br>Message',0,'2017-02-09 15:17:26','2017-02-09 15:17:26'),(4,'My name is name','Topic: Is speak of speaking<br>The content is content',0,'2017-02-09 15:18:06','2017-02-09 15:18:06'),(5,'My name is name','Topic: Is speak of speaking<br>The content is content',0,'2017-02-09 15:18:12','2017-02-09 15:18:12');
+INSERT INTO `messages` VALUES (11,'dgryey','<p style=\'text-align:center\'>Topic: trytrujgfdj</p> oyufblihzreapgtu',1,'2017-02-10 10:46:19','2017-02-10 10:46:28'),(14,'reg','<p style=\'text-align:center\'>Topic: fdgfdh</p> hfdshgfhf',1,'2017-02-10 11:03:33','2017-02-10 11:03:37'),(16,'plop ploup plopy','<p style=\'text-align:center\'>Topic: plop ploup plopy</p> plop ploup plopy',1,'2017-02-10 11:08:24','2017-02-10 11:08:28'),(17,'Moi','<p style=\'text-align:center\'>Topic: J\'aime les salades</p> Ah non attention, si vraiment tu veux te rappeler des souvenirs de ton perroquet, entre penser et dire, il y a un monde de différence puisque the final conclusion of the spirit is perfection Mais ça, c\'est uniquement lié au spirit.\r\n\r\nTu vois, tu vois au passage qu\'il n\'y a rien de concret car entre penser et dire, il y a un monde de différence puisque the final conclusion of the spirit is perfection Et tu as envie de le dire au monde entier, including yourself.',0,'2017-02-10 11:11:04','2017-02-10 11:11:04');
 /*!40000 ALTER TABLE `messages` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -127,7 +127,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'admin','adimn@admin.com','$2y$10$5fP6T5dO8czulba48VQAEeQf5kOOGeTB9fK8T4VI0DZtJR6od76z6','AqKBGASNEy7oWIOWzk2sxju4nPut9t8zyg4qxrfiQJftjJ6J53eO5x4s7Bro','2017-02-09 10:31:36','2017-02-09 10:31:36',1);
+INSERT INTO `users` VALUES (1,'admin','adimn@admin.com','$2y$10$5fP6T5dO8czulba48VQAEeQf5kOOGeTB9fK8T4VI0DZtJR6od76z6','b9Ok2dW3J1f1qWSxE3TPD7EZtkMmEKkr2lsW7jsoduV35dAGYMFt4KrZH9Ua','2017-02-09 10:31:36','2017-02-09 10:31:36',1);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -140,4 +140,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-02-09 16:10:45
+-- Dump completed on 2017-02-10 11:13:18

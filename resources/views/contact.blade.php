@@ -9,7 +9,7 @@ Contact us
 <main id="contact">
     <h1>{{ (isset($feedback)) ? $feedback : 'Want to get in touch?' }}</h1>
 
-    <p>We realy want to hear from you</p>
+    <p>We realy appreciate questions and feedback!</p>
 
     {{ Form::open(['url' => '/contact']) }}
         {{ Form::label('sender', 'What is your name?') }}

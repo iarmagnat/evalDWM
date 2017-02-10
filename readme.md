@@ -41,7 +41,7 @@ Stores the messages sent by users, as well as their reading status as a 0/1 inte
 
 - Message reading page
 
-    - Includes an ajax request to mark messages as read and a special display for unread ones
+    - Includes an ajax request to delete or mark messages as read and a special display for unread ones
 
 ## issues
 

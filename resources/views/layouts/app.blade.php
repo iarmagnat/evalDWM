@@ -44,16 +44,14 @@
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
 
                         <li><a href="{{ url('/products') }}">Products</a></li>
                         <li><a href="{{ url('/contact') }}">Contact</a></li>
+
+                        {{-- Realy ugly but better than nothing way to check if the user is admin --}}
                         @php
                             if (Auth::check()):
                         @endphp
@@ -61,12 +59,15 @@
                             if (Auth::user()->is_admin):
                         @endphp
                             <li><a href="{{ url('/messages') }}">See Messages</a></li>
+                            <li><a href="{{ url('/products/add') }}">Add product</a></li>
                         @php
                             endif;
                         @endphp
                         @php
                             endif;
                         @endphp
+
+
                         <!-- Authentication Links -->
                         @if (Auth::guest())
                             <li><a href="{{ route('login') }}">Login</a></li>

@@ -22,7 +22,7 @@ $( document ).ready(function() {
     });
 
     //ajax request to mark messages as read
-    $('.unread a').on('click', function(event){
+    $('td:nth-of-type(3) a').on('click', function(event){
         event.preventDefault();
         var id = $(this).attr('href');
         var requestUrl = 'message/' + id;
@@ -31,8 +31,12 @@ $( document ).ready(function() {
             url: requestUrl,
             type: 'get',
             success: function(data) {
-                $('tr#m' + id).removeClass('unread');
-                $('tr#m' + id + ' :nth-child(3)').remove();
+                if( $('tr#m' + id + ' :nth-child(3) a').text() == 'Delete' ){
+                    $('tr#m' + id).remove()
+                } else {
+                    $('tr#m' + id).removeClass('unread');
+                    $('tr#m' + id + ' :nth-child(3) a').text('Delete');
+                }
             }
         });
     });

@@ -10,12 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::post('/contact', 'ContactController@send');
-Route::get('/message/{id}', 'ContactController@markRead')->middleware('auth');
+Route::post('/contact', 'MessagesController@send');
+Route::get('/message/{id}', 'MessagesController@markRead')->middleware('auth');
 
 Route::get('/products', 'ProductsController@index');
-Route::get('/contact', 'ContactController@index');
-Route::get('/messages', 'ContactController@see');
+Route::get('/contact', 'MessagesController@index');
+Route::get('/messages', 'MessagesController@see');
 
 Route::get('/', function () {
     return view('welcome');
