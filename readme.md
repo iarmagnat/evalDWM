@@ -1,12 +1,12 @@
 # DWM 2017 eval
 
-## required config and main usage directives
+## Required config and main usage directives
 
-database name: shop
+Database name: shop
 
-usage of laravel-colective forms
+Usage of laravel-colective forms
 
-admin acount: 
+Admin acount: 
 - email: admin@admin.com
 - password: 0000Admin
 
@@ -19,18 +19,18 @@ By the way, the way, the root directry name I used was "test". That should't mak
 
 ## Data Architecture
 
-### user table
+### 'user' table
 
 self managed by the Laravel auth middleware, but with an added collumn is_admin for quick privileges management.
 
-### products table
+### 'products' table
 
 Stores, in order:
 - link to related product image
 - title
 - product description
 
-### messages table
+### 'messages' table
 
 Stores the messages sent by users, as well as their reading status as a 0/1 integer:
 - sender
