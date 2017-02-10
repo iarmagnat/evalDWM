@@ -20,9 +20,17 @@ class MessagesController extends Controller
 
             $message->sender = $request->sender;
 
-            $content = "<p style='text-align:center'>Topic: " . $request->topic . "</p> ";
+            if ( $request->topic ){
+                $topic = $request->topic;
+            } else {
+                $topic = 'Not Specified';
+            }
+
+            $content = "<p style='text-align:center'>Topic: " . $topic . "</p> ";
 
             $content .= $request->content;
+
+            $content = str_replace("\r\n", "<br>", $content);
 
             $message->content = $content;
 

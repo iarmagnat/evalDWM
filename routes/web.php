@@ -13,6 +13,9 @@
 Route::post('/contact', 'MessagesController@send');
 Route::get('/message/{id}', 'MessagesController@markRead')->middleware('auth');
 
+Route::post('/products/add', 'ProductsController@addOne');
+Route::get('/products/add', 'ProductsController@add');
+
 Route::get('/products', 'ProductsController@index');
 Route::get('/contact', 'MessagesController@index');
 Route::get('/messages', 'MessagesController@see');

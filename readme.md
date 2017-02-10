@@ -10,6 +10,13 @@ admin acount:
 - email: admin@admin.com
 - password: 0000Admin
 
+A sybolinc link between the public directory and the storage directory is required ->
+If the images do no show up on the products display page, run the following command at the root of the project:
+
+    php artisan storage:link
+
+By the way, the way, the root directry name I used was "test". That should't make any difference but that's one maybe usefull info for toubleshooting.
+
 ## Data Architecture
 
 ### user table
@@ -42,6 +49,10 @@ Stores the messages sent by users, as well as their reading status as a 0/1 inte
 - Message reading page
 
     - Includes an ajax request to delete or mark messages as read and a special display for unread ones
+
+- add Product
+
+    - Includes a file upload field (unstyled by lack of time) and a WYSIWYG editor for the product (the image is a kitten as a placeholder as I didn't know hot to do in otherwise) 
 
 ## issues
 

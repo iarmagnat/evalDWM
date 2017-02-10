@@ -16,7 +16,7 @@ Products
             <div class="productCard" id="prod{{ $product->id }}">
 
                 <div class="base">
-                    <img src="/img/products/{{ $product->img }}" alt="{{ $product->title }}">
+                    <img src="/{{ $product->img }}" alt="{{ $product->title }}">
                     <span>{{ $product->title }}</span>
                 </div>
 

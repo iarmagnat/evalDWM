@@ -44,4 +44,11 @@ $( document ).ready(function() {
     $( "main#welcome > *" ).animate({
         opacity: 1
     }, 4000);
+
+    if( location.pathname == "/products/add" ){
+        setInterval(function(){
+            $('#title').html( $('#titleForm').val() );
+            $('.desc p').html( $('#descForm').val().replace("\n", "<br>") );
+        }, 500);
+    }
 });
