@@ -32,7 +32,11 @@ Stores, in order:
 
 ### messages table
 
-Stores the messages sent by users, as well as their reading status as a 0/1 integer
+Stores the messages sent by users, as well as their reading status as a 0/1 integer:
+- sender
+- message content, as html code, with the topic pasted at the top
+- read: a INT(1) collumn for the read/unread status
+- the eloquent standard timestamps that are only user for sorting messages by order of arrival
 
 ## Features
 
@@ -57,3 +61,10 @@ Stores the messages sent by users, as well as their reading status as a 0/1 inte
 ## issues
 
 - A single CSS and JS file is loaded in every page leaving a lot of what is loaded unused
+- No checking is made on the type of file that is uploaded or even on the data that goes in the foms besides existance leading to possible security flaws
+
+## Side Notes
+
+- I know the result is ugly... I did my best you know...
+- I did not have time for the U and D in the products CRUD... That's kind of a shame... Kinda kills the usability of the whole thing.
+- I wanted to include snek ( https://github.com/iarmagnat/snek.git ) as a 404 page but again, time ran by quickly...
