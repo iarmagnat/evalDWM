@@ -20,7 +20,7 @@ Contact us
         
         {{ Form::textarea('content', '', ['placeholder' => 'Type what commes to mind']) }}
 
-        {{ Form::submit("That's all?") }}
+        {{ Form::submit("Ready to send?") }}
     {{ Form::close() }}
 
 </main>

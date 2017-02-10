@@ -103,7 +103,7 @@
 
             <strong>Want to meet us?</strong>
 
-            <span id="address">number Street-Street City Zipcode</span>
+            <span id="address">number Street-Street City Zipcode Country</span>
 
             <span id="copyright">©Me 2017</span>
 

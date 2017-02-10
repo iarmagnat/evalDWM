@@ -6,7 +6,6 @@ database name: shop
 
 usage of laravel-colective forms
 
-
 admin acount: 
 - email: admin@admin.com
 - password: 0000Admin
@@ -24,6 +23,10 @@ Stores, in order:
 - title
 - product description
 
+### messages table
+
+Stores the messages sent by users, as well as their reading status as a 0/1 integer
+
 ## Features
 
 - Welcome page
@@ -39,3 +42,7 @@ Stores, in order:
 - Message reading page
 
     - Includes an ajax request to mark messages as read and a special display for unread ones
+
+## issues
+
+- A single CSS and JS file is loaded in every page leaving a lot of what is loaded unused

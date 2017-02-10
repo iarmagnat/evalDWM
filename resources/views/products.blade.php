@@ -20,8 +20,8 @@ Products
                     <span>{{ $product->title }}</span>
                 </div>
 
-                <div class="desc hidden">
-                    <p>{{ $product->description }}</p>
+                <div class="desc desc-collapsed">
+                    <p>{!! $product->description !!}</p>
                 </div>
                 
             </div>

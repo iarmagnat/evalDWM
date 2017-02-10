@@ -11,6 +11,7 @@
 |
 */
 Route::post('/contact', 'ContactController@send');
+Route::get('/message/{id}', 'ContactController@markRead')->middleware('auth');
 
 Route::get('/products', 'ProductsController@index');
 Route::get('/contact', 'ContactController@index');

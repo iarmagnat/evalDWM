@@ -1,3 +1,6 @@
+/* 
+    general
+*/
 nav{
     box-shadow: 0px 5px 5px 0px #656565;
 }
@@ -20,7 +23,7 @@ nav{
     border-top:0;
 }
 
-.navbar-default .navbar-toggle:hover{
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
     background-color: palegreen;
 }
 
@@ -44,14 +47,56 @@ footer{
 }
 
 main{
-    min-height: 76vh;
+    padding-top: 15px;
+    min-height: 85vh;
 }
 
+/*
+    Auth pages
+        register
+        login
+        logged in
+        forgot password
+*/
+
+main#auth form input[type="text"], main#auth form input[type="password"], main#auth form input[type="email"]{
+    width: 100%;
+    outline-color: palegreen;
+    margin-bottom: 10px;
+    border: 1px solid darkgray;
+    border-radius: 0;
+    box-shadow: 0px 2px 5px 0px #656565;
+}
+
+main#auth form button{
+    width: 130px;
+    background-color: palegreen;
+    border: 1px solid darkgray;
+    border-radius: 0;
+    color: #656565;
+    box-shadow: 0px 2px 5px 0px #656565;
+}
+
+main#auth form button.wide{
+    width: 200px;
+}
+
+main#auth form button:hover{
+    box-shadow: 0px 5px 15px 0px #656565;
+}
+
+main#auth form button:focus{
+    box-shadow: 0px 2px 5px 0px #656565 inset;
+    outline: 0;
+}
+
+/*
+    Welcome page
+*/
 main#welcome{
     background-image: url(/img/welcome_bg.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-size: auto 100%;
     padding-top: 0;
     display: flex;
@@ -69,10 +114,18 @@ main#welcome *{
     background-color: rgba(0, 0, 0, .5);
     color: white;
     padding: 15px;
+    opacity: 0;
 }
 
 main#welcome a{
     font-size: 1.5em;
+}
+
+/*
+    Products display page
+*/
+h1{
+    text-align: center;
 }
 
 hr{
@@ -123,6 +176,16 @@ hr{
     text-align: center;
 }
 
+/*
+    Contact page
+*/
+
+main#contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 main#contact h1{
     text-align: center;
 }
@@ -134,7 +197,44 @@ main#contact p {
 
 main#contact form{
     display: flex;
+    flex-direction: column;
+    width: 80vw;
 }
+
+main#contact form input, main#contact form textarea {
+    width: 100%;
+    outline-color: palegreen;
+    margin-bottom: 10px;
+    border: 1px solid darkgray;
+    box-shadow: 0px 2px 5px 0px #656565;
+}
+
+main#contact form input[type="text"], main#contact form textarea{
+    padding: 10px;
+}
+
+main#contact form textarea{
+    resize: none;
+}
+
+main#contact form input:last-of-type{
+    background-color: palegreen;
+    align-self: center;
+    width: 130px;
+}
+
+main#contact form input:last-of-type:hover{
+    box-shadow: 0px 5px 15px 0px #656565;
+}
+
+main#contact form input:last-of-type:focus{
+    box-shadow: 0px 2px 5px 0px #656565 inset;
+    outline: 0;
+}
+
+/*
+    See messages page
+*/
 
 main#messages{
     display: flex;
@@ -144,6 +244,7 @@ main#messages{
 
 main#messages > div{
     border: 1px solid darkgray;
+    background-color: #f5f5f5;
     padding: 5px;
     box-shadow: 0px 5px 5px 0px #656565;
     max-width: 700px;
@@ -153,17 +254,29 @@ main#messages > div{
     text-align: center;
 }
 
+#messagesTable tr{
+    border-bottom: 1px solid darkgray;
+}
+
+#messagesTable td{
+    padding: 0 5px;
+}
+
 #messagesTable tr td:first-child, #messagesTable tr th:first-child{
-    background-color: green;
     width: 20%;
 }
 
 #messagesTable tr :nth-child(2){
-    background-color: blue;
+    border-right: 1px solid darkgray;
+    border-left: 1px solid darkgray;
     width: 70%;
 }
 
 #messagesTable tr :nth-child(3){
-    background-color: red;
+    background-color: #f5f5f5;
     width: 10%;
+}
+
+.unread{
+    background-color: lightcoral;
 }

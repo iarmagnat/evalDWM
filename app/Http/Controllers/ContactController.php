@@ -42,4 +42,12 @@ class ContactController extends Controller
         }
         return view('welcome');
     }
+
+    public function markRead($id) {
+        $message = Message::find($id);
+
+        $message->read = 1;
+
+        $message->save();
+    }
 }

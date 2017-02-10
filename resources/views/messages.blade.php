@@ -20,12 +20,14 @@ See messages
                     @if ($message->read)
                         <tr>
                     @else
-                        <tr class="unread">
+                        <tr class="unread" id="m{{ $message->id }}">
                     @endif
                         <td> {{ $message->sender }} </td>
                         <td> {!! $message->content !!} </td>
                         {{-- I have to use {!! insthead of {{ in order for the html to be rendred and not escaped --}}
-                        <td><a href="{{$message->id}}">Mark as read</a></td>
+                        @if ( !($message->read) )
+                            <td><a href="{{ $message->id }}">Mark as read</a></td>
+                        @endif
                     </tr>
                 @endforeach
             </tbody>
